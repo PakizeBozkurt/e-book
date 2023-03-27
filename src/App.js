@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import BookLibrary from "./components/BookLibrary";
+import BookReader from "./components/BookReader";
+import "./App.css";
 
 function App() {
+  const [books, setBooks] = useState([]);
+
+  // Fetch all books from the API
+  useEffect(() => {
+    fetch("/api/books")
+      .then((response) => response.json())
+      .then((data) => setBooks(data))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <BookLibrary books={books} />
+          </Route>
+          <Route path="/books/:id">
+            <BookReader />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
