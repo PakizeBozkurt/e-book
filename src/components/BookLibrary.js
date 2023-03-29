@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 
 function BookLibrary() {
   const [books, setBooks] = useState([]);
@@ -18,9 +17,7 @@ function BookLibrary() {
       <h1>My Library</h1>
       <ul>
         {books.map((book) => (
-          <li key={book.id}>
-          {book.title}
-          </li>
+          <li key={book.id}>{book.title}</li>
         ))}
       </ul>
     </div>
