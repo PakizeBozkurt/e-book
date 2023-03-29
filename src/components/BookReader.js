@@ -7,11 +7,11 @@ function BookReader() {
 
   // Fetch the book with the specified ID from the API
   useEffect(() => {
-    fetch(`/api/books/${id}`)
+    fetch(`http://localhost:3011/books`)
       .then((response) => response.json())
       .then((data) => setBook(data))
       .catch((error) => console.log(error));
-  }, [id]);
+  }, []);
 
   return (
     <div>
