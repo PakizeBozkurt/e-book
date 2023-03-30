@@ -17,7 +17,7 @@ function BookLibrary() {
       <h1>My Library</h1>
       <ul>
         {books.map((book) => (
-          <li key={book.id}>{book.title, book.author}</li>
+          <li key={book.id}>{book.title, book.author, book.description}</li>
         ))}
       </ul>
     </div>
