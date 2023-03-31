@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./Main.css"
 
 function BookReader() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ function BookReader() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {book ? (
         <>
           <h1>{book.title}</h1>
