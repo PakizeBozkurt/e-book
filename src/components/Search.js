@@ -1,3 +1,4 @@
+import "./Search.css";
 export default function SearchComponent({
   placeholder,
   value,
