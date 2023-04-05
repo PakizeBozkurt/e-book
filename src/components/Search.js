@@ -1,5 +1,6 @@
+import React from "react";
 import "./Search.css";
-export default function SearchComponent({
+export default function Search({
   placeholder,
   value,
   setValue,
