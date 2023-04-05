@@ -1,0 +1,44 @@
+*,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.main {
+  padding: 1rem 0;
+}
+
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 10px;
+  padding: 0.53rem 0.75rem;
+  background-color: rgb(45, 123, 248);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+
+.trending-subjects {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
