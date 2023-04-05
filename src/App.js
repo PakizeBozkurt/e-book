@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Content from "./pages/Content";
+import Footer from "./pages/Footer";
 
 import "./styles.css";
 
@@ -47,10 +48,7 @@ export default function App() {
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/subject/design"
-          element={<Content subject="design" />}
-        />
+        <Route path="/subject/design" element={<Content subject="design" />} />
         <Route
           path="/subject/programming"
           element={<Content subject="programming" />}
@@ -68,6 +66,7 @@ export default function App() {
           element={<Content subject="management" />}
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
