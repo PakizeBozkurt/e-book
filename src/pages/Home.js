@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // eslint-disable-next-line
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Book from "../components/Book/Book";
 import Search from "../components/Search/Search";
@@ -56,23 +56,17 @@ export default function Home() {
       />
       <div>
         <h4 style={{ marginBottom: 15, textAlign: "center" }}>
-          Top trending subjects
+        Favourite list
         </h4>
         <div className="trending-subjects">
-          <Link to="/subject/design">Design</Link>
-          <Link to="/subject/programming">Programming</Link>
-          <Link to="/subject/finance">Finance</Link>
+          <Link to="/subject/study and teaching">Study and Teaching</Link>
+          <Link to="/subject/women">Women</Link>
+          <Link to="/subject/study skills">Study Skills</Link>
           <Link to="/subject/exercise">Exercise</Link>
           <Link to="/subject/management">Management</Link>
         </div>
       </div>
       <div className="books-container">
-        {/* {!data && (
-          <div style={{ textAlign: "center" }}>
-            <p> No records found</p>
-            <h4> Please search something </h4>
-          </div>
-        )} */}
         {data &&
           data.docs.map((d, i) => {
             return (
