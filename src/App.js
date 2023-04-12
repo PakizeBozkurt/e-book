@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Content from "./pages/Content";
 import Footer from "./pages/Footer";
@@ -11,11 +11,6 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [pageCount, setPageCount] = useState(1);
   const [loading, setLoading] = useState(false);
-
-  const searchQuery = (e) => {
-    setPageCount(1);
-    fetchData();
-  };
 
   useEffect(() => {
     fetchData();
@@ -36,26 +31,18 @@ export default function App() {
       });
   };
 
-  const prevClick = () => {
-    setPageCount((prev) => prev - 1);
-  };
-
-  const nextClick = () => {
-    setPageCount((prev) => prev + 1);
-  };
-
   return (
     <div className="main">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/subject/design" element={<Content subject="design" />} />
         <Route
-          path="/subject/programming"
-          element={<Content subject="programming" />}
+          path="/subject/Study and Teaching"
+          element={<Content subject="study_and_teaching" />}
         />
+        <Route path="/subject/women" element={<Content subject="women" />} />
         <Route
-          path="/subject/finance"
-          element={<Content subject="finance" />}
+          path="/subject/Study Skills"
+          element={<Content subject="study_skills" />}
         />
         <Route
           path="/subject/exercise"

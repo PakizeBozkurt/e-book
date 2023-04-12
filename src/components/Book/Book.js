@@ -20,7 +20,6 @@ export default function Book({ title, author, coverId }) {
           <span>
             Author: <span className="author-name">{author}</span>
           </span>
-          {/* <button type="button">Buy</button> */}
         </div>
       </div>
     </>
