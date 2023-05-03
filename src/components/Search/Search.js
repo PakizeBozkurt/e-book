@@ -15,7 +15,7 @@ export default function Search({
     <div className="search-section">
       <div className="position-relative">
         <input
-          placeholder={placeholder}
+          placeholder={"Search for something..."}
           type="text"
           value={value}
           onChange={handleOnchange}
